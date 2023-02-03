@@ -13,11 +13,14 @@
 const handleChange = async () => {
   const fileUpload = document.querySelector("#fileUpload");
   // console.log(fileUpload.files);
-  const response = await fetch("http://localhost:3000/fileUpload", {
-    method: "POST",
-    body: fileUpload.files[0], // This is main point...
-    // body: JSON.parse('{ "message": "THIS IS FOR YOU.." }'),
-  });
+  const response = await fetch(
+    "http://localhost:3000=>https://episode-22.onrender.com/",
+    {
+      method: "POST",
+      body: fileUpload.files[0], // This is main point...
+      // body: JSON.parse('{ "message": "THIS IS FOR YOU.." }'),
+    }
+  );
 
   console.log(await response.json());
 };
